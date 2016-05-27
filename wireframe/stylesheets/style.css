@@ -1,0 +1,134 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+/* Colors */
+.yellow {
+	background-color: #FAF3A1;
+}
+
+.aqua {
+	background-color: #BAE0CE;
+}
+
+.beige {
+	background-color: #CFCABD;
+}
+
+.drkbrown {
+	background-color: #726969;
+}
+
+/* Padding */
+.pad-top-5 {
+	padding: 2%;
+}
+.tab{
+	padding-right: 3em;
+}
+.margin-top-nav {
+	margin-top: 5.2%;
+}
+
+
+/* Alignment */
+.centerText {
+	text-align: center;
+}
+
+/* Navigation */
+.navTopThinLine {
+	border-top: 1px solid #726969;
+	margin-top: 2px;
+}
+.navTopThickLine {
+	border-top: 3px solid #726969;
+	margin-top: 2px;
+}
+.navBThinLine {
+	border-bottom: 1px solid #726969;
+	margin-top: 2px;
+}
+.navBThickLine {
+	border-bottom: 3px solid #726969;
+	margin-top: 50px;
+}
+.navSolid{
+	background-color: #726969;
+	color: #CFCABD;
+	font-family: 'deriviaregular';
+	letter-spacing: 1px;
+	margin-top: .5%;
+	padding-top: .5%;
+	text-align: center;
+	font-size: 16px;
+}
+
+.logo {
+	margin-top: 1%;
+	position: absolute;
+	max-width: 25%;
+	margin-left: 37%;
+}
+
+/* Footer */
+.footer {
+	border-top: 1px solid #CFCABD;
+	margin-top: 2px;
+	color: #726969;
+	margin-bottom: %;
+}
+.footerTop {
+	border-top: 3px solid #CFCABD;
+	margin-top: 10%;
+}
+
+/* HOME */
+.mainImg {
+	position: absolute;
+	max-width: 95%;
+}
+
+/* ART SHOP */
+/* Pull Out */
+
+.offer {
+	padding-top: 7%;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 30px;
+	color: #CFCABD;
+}
+
+/* Sign Up & Categorie Nav */
+
+.newNav {
+	background-color: rgba(207, 202, 189, .5);
+	padding-top: 9px;
+	padding-bottom: 4px;
+	color: #726969;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+/* Gallery */
+.product {
+		margin-top: 5%;
+}
+.productName {
+	border: 1px solid #FAF3A1;
+
+}
+
+.price {
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+

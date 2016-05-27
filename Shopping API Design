@@ -1,0 +1,61 @@
+API Design: Shopping Cart
+
+<!-- HANDLEBARS -->
+
+GET /
+	Render "index"
+	
+POST /login
+	AJAX Request
+	if login valid
+		send back user data
+	Else
+		send back "false"
+	
+GET /item/:item#
+	Render "desciption"
+	
+POST /cart-item
+	AJAX Request
+	update shopping cart based off of purchasing choices
+	show shopping cart update send item# and options
+	
+GET /cart
+	Render "cart"
+	
+POST /cart
+	AJAX Request
+	update cart by deleting items then rendering updated price
+	
+<!-- SPA -->
+
+GET /
+	Send Everything
+	
+GET /item/:item#
+	AJAX Request
+	Send description
+	
+POST /cart-item
+	AJAX Request
+	Send back a JSON object.total
+	
+GET /cart
+	AJAX Request
+	Send back a JSON object
+	
+	
+POST /cart
+	AJAX Request
+	default login is guest and order won't be saved beyond session
+	Send back an updated JSON object
+	
+POST /cart/submit
+	AJAX Request
+	Save cart object
+	Send email with order
+	Send back "Success, this order was a demo and will not actually be processed. You have not been charged any money "
+	
+	
+	
+	
