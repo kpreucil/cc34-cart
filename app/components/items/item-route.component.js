@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var shop_item_component_1 = require('../items/shop-item.component');
 var item_service_1 = require('../../services/item.service');
-var ShopRouteComponent = (function () {
-    function ShopRouteComponent(itemService) {
+var item_description_component_1 = require('../items/item-description.component');
+var ItemRouteComponent = (function () {
+    function ItemRouteComponent(itemService) {
         this.itemService = itemService;
     }
-    ShopRouteComponent = __decorate([
+    ItemRouteComponent = __decorate([
         core_1.Component({
-            directives: [shop_item_component_1.ShopItemComponent],
-            selector: 'shop',
-            templateUrl: 'app/templates/routes/shop-route.template.html'
+            directives: [item_description_component_1.ItemDescriptionComponent],
+            selector: 'item-route',
+            templateUrl: 'app/templates/routes/item-route.template.html'
         }), 
         __metadata('design:paramtypes', [item_service_1.ItemService])
-    ], ShopRouteComponent);
-    return ShopRouteComponent;
+    ], ItemRouteComponent);
+    return ItemRouteComponent;
 }());
-exports.ShopRouteComponent = ShopRouteComponent;
-//# sourceMappingURL=shop-route.component.js.map
+exports.ItemRouteComponent = ItemRouteComponent;
+//# sourceMappingURL=item-route.component.js.map

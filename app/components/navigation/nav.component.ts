@@ -1,4 +1,6 @@
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
+
 
 @Component({
 	selector: 'navigation',
@@ -6,5 +8,10 @@ import { Component, Input } from "@angular/core";
 })
 
 export class NavComponent {
+	constructor (private router: Router) {
 
+	}
+	goToRoute(route) {
+		this.router.navigate([route]);
+	}
 }

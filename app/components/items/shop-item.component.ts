@@ -5,4 +5,9 @@ import { Component, Input } from "@angular/core";
 	templateUrl: 'app/templates/shop-item.template.html'
 })
 
-export class ShopItemComponent {}
+export class ShopItemComponent {
+	@Input() thumb1: any;
+	@Input() name: string;
+	@Input() id: number;
+	@Input() price: number;
+}

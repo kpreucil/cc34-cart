@@ -48,6 +48,7 @@ body {
 .navBThinLine {
 	border-bottom: 1px solid #726969;
 	margin-top: 2px;
+	margin-bottom: 7%;
 }
 .navBThickLine {
 	border-bottom: 3px solid #726969;
@@ -62,6 +63,22 @@ body {
 	padding-top: .5%;
 	text-align: center;
 	font-size: 16px;
+}
+a{
+	text-decoration: none;
+	color: #CFCABD;
+}
+a:visited {
+	text-decoration: none;
+	color: #CFCABD;
+}
+a:hover {
+	text-decoration: none;
+	color: #FAF3A1;
+}
+a:active {
+	text-decoration: none;
+	color: #FAF3A1;
 }
 
 .logo {
@@ -93,7 +110,7 @@ body {
 /* Pull Out */
 
 .offer {
-	padding-top: 7%;
+	/*padding-top: 7%;*/
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 30px;
@@ -122,6 +139,25 @@ body {
 
 .price {
 	font-size: 16px;
+}
+
+/* Item Description */
+
+.imgfit {
+	/*width: 100%;*/
+	height: 100%; 
+/*	margin-left: 7%;
+*/}
+.imgThumb {
+	height: 50px;
+	width: 50px;
+	border: 1px solid #CFCABD;
+	margin-bottom: 3px;
+}
+.imgContainer {
+	height: 475px;
+	width: 475px;
+	border: 1px solid;
 }
 
 

@@ -1,7 +1,7 @@
 <!-- START PullOut -->
 	<div class="container centerText">
-		<h2 class="offer">Free Shipping</h2>
-		<p>On all orders in the US.</p>
+		<h2 class="offer">some offer</h2>
+		<p>details</p>
 	</div>
 	<!-- END PullOut -->
 
@@ -20,63 +20,12 @@
 	<!-- First Row -->
 		<div class="container">
 			<div class="row centerText">
-				<div class="col-md-4">
-					<div class="product">
-						<img src="assets/images/figure_tutu.png">
-						<div class="productName">
-							<h4> <span class="tab">Sample Name</span><span class="price">$00.00</span></h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="product">
-						<img src="assets/images/figure_tutu.png">
-						<div class="productName">
-							<h4> <span class="tab">Sample Name</span><span class="price">$00.00</span></h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="product">
-						<img src="assets/images/figure_tutu.png">
-						<div class="productName">
-							<h4> <span class="tab">Sample Name</span><span class="price">$00.00</span></h4>
-						</div>
-					</div>
+				<div class="col-md-4" *ngFor="let item of itemService.inventory">
+					<shop-item [thumb1]= "item.thumb1" [name]= "item.name" [price]= "item.price"></shop-item>
 				</div>
 			</div>
 		</div>
-	<!-- Second Row -->
-		<div class="container">
-			<div class="row centerText product">
-				<div class="col-md-4">
-					<div class="product">
-						<img src="assets/images/figure_tutu.png">
-						<div class="productName">
-							<h4> <span class="tab">Sample Name</span><span class="price">$00.00</span></h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="product">
-						<img src="assets/images/figure_tutu.png">
-						<div class="productName">
-							<h4> <span class="tab">Sample Name</span><span class="price">$00.00</span></h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="product">
-						<img src="assets/images/figure_tutu.png">
-						<div class="productName">
-							<h4> <span class="tab">Sample Name</span><span class="price">$00.00</span></h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</main>
+	</main>
 
 	<!-- END Item Gallery -->
 

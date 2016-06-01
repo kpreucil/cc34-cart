@@ -12,6 +12,22 @@ var core_1 = require("@angular/core");
 var ShopItemComponent = (function () {
     function ShopItemComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], ShopItemComponent.prototype, "thumb1", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], ShopItemComponent.prototype, "name", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], ShopItemComponent.prototype, "id", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], ShopItemComponent.prototype, "price", void 0);
     ShopItemComponent = __decorate([
         core_1.Component({
             selector: 'shop-item',

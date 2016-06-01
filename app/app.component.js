@@ -13,19 +13,24 @@ var router_1 = require('@angular/router');
 var shop_route_component_1 = require('./components/shop/shop-route.component');
 var nav_component_1 = require('./components/navigation/nav.component');
 var footer_component_1 = require('./components/footer/footer.component');
+var item_route_component_1 = require('./components/items/item-route.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'angular-app',
-            directives: [footer_component_1.FooterComponent, nav_component_1.NavComponent, shop_route_component_1.ShopRouteComponent, router_1.ROUTER_DIRECTIVES],
-            template: "\n  \t<navigation></navigation>\n  \t<div>\n  \t \t<a [routerLink]=\"['/shop']\">Art Shop</a>\n  \t\t<router-outlet></router-outlet>\n  \t</div>\n  \t<footer></footer>\n  "
+            directives: [router_1.ROUTER_DIRECTIVES, item_route_component_1.ItemRouteComponent, footer_component_1.FooterComponent, nav_component_1.NavComponent, shop_route_component_1.ShopRouteComponent],
+            template: "\n  \t<navigation></navigation>\n  \t<div>\n  \t \t<a [routerLink]=\"['/item']\">Item</a>\n  \t\t<router-outlet></router-outlet>\n  \t</div>\n  \t<footer></footer>\n  "
         }),
         router_1.Routes([
             {
                 path: '/shop',
                 component: shop_route_component_1.ShopRouteComponent
+            },
+            {
+                path: '/item',
+                component: item_route_component_1.ItemRouteComponent
             }
         ]), 
         __metadata('design:paramtypes', [])
