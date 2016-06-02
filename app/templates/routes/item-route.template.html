@@ -1,5 +1,7 @@
 <div class="container">
-	<div class="row" *ngFor="let item of itemService.inventory">
-		<item-desc [thumb1]= "item.thumb1" [thumb2]= "item.thumb2" [thumb3]= "item.thumb3" [img1]= "item.img1" [img2]= "item.img2" [img3]= "item.img3" [name]= "item.name" [id]= "item.id" [description]= "item.description"></item-desc>
+	<div class="row">
+		<item-desc 
+		*ngIf= "currentItem" [CurrItem]= "currentItem"
+		></item-desc>
 	</div>
 </div>

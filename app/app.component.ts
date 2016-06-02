@@ -14,7 +14,6 @@ import { ItemRouteComponent } from './components/items/item-route.component';
   template: `
   	<navigation></navigation>
   	<div>
-  	 	<a [routerLink]="['/item']">Item</a>
   		<router-outlet></router-outlet>
   	</div>
   	<footer></footer>
@@ -26,7 +25,7 @@ import { ItemRouteComponent } from './components/items/item-route.component';
 		component: ShopRouteComponent
 	},
 	{
-		path: '/item',
+		path: '/item/:id',
 		component: ItemRouteComponent
 	}
 ])

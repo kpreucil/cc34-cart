@@ -21,7 +21,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'angular-app',
             directives: [router_1.ROUTER_DIRECTIVES, item_route_component_1.ItemRouteComponent, footer_component_1.FooterComponent, nav_component_1.NavComponent, shop_route_component_1.ShopRouteComponent],
-            template: "\n  \t<navigation></navigation>\n  \t<div>\n  \t \t<a [routerLink]=\"['/item']\">Item</a>\n  \t\t<router-outlet></router-outlet>\n  \t</div>\n  \t<footer></footer>\n  "
+            template: "\n  \t<navigation></navigation>\n  \t<div>\n  \t\t<router-outlet></router-outlet>\n  \t</div>\n  \t<footer></footer>\n  "
         }),
         router_1.Routes([
             {
@@ -29,7 +29,7 @@ var AppComponent = (function () {
                 component: shop_route_component_1.ShopRouteComponent
             },
             {
-                path: '/item',
+                path: '/item/:id',
                 component: item_route_component_1.ItemRouteComponent
             }
         ]), 

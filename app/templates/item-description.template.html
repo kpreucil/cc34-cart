@@ -1,35 +1,61 @@
 <div class="col-md-1">
 	<div class="imgThumb" id="one">
-		{{thumb1}}
+		<img src={{thumb1}} class="imgFit">
 	</div> 
 	<div class="imgThumb" id="two">
-		{{thumb2}}
+		<img src="{{thumb2}}">
 	</div> 
 	<div class="imgThumb" id="three">
-		{{thumb3}}
+		<img src="{{thumb3}}">
 	</div> 
 </div>
 <div class="col-md-5 imgContainer">
 	<!-- Img -->
-	{{img1}}
+	<img src="{{img1}}">
 </div>
-<div class="col-md-3">
-	<!-- price, options, descpription, add to cart button-->
+<div class="col-md-4">
 	<h2>{{name}}</h2>
 	<p>id: {{id}}</p>
 	<p>Description: <br /> {{description}}
 	</p>
 </div>
-<div class="col-md-3">
-	<div class="dropdown">
-	  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Choose A Size
-	    <span class="caret"></span>
-	  </button>
-	  <ul class="dropdown-menu" aria-labelledby="dLabel">
-	    <li>8x10</li>
-	    <li>11x14</li>
-	    <li>16x20</li>
-	  </ul>
+<div class="col-md-2">
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  		<div class="panel panel-default">
+    		<div class="panel-heading" role="tab" id="headingOne">
+      			<h4 class="panel-title">
+        			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          				Paper Prints
+        			</a>
+      			</h4>
+    		</div>
+    		<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      			<div class="list-group">
+        			<input type="checkbox" name="paper-print" value="8x10"> 8x10
+        			<br />
+        			<input type="checkbox" name="paper-print" value="11x14"> 11x14
+        			<br />
+					<input type="checkbox" name="paper-print" value="16x20"> 16x20
+      			</div>
+    		</div>
+  		</div>
+  		<div class="panel panel-default">
+    		<div class="panel-heading" role="tab" id="headingTwo">
+		      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			        	Canvas Prints
+			        </a>
+      			</h4>
+    		</div>
+    		<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      			<div class="list-group">
+		        	<input type="checkbox" name="canvas-print" value="8x10"> 8x10
+        			<br />
+        			<input type="checkbox" name="canvas-print" value="11x14"> 11x14
+        			<br />
+					<input type="checkbox" name="canvas-print" value="16x20"> 16x20
+		      	</div>
+    		</div>
+  		</div>
 	</div>
 </div>

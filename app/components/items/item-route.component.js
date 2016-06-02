@@ -9,19 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require('@angular/router');
 var item_service_1 = require('../../services/item.service');
 var item_description_component_1 = require('../items/item-description.component');
+var shop_item_component_1 = require('../items/shop-item.component');
 var ItemRouteComponent = (function () {
-    function ItemRouteComponent(itemService) {
+    function ItemRouteComponent(itemService, router) {
         this.itemService = itemService;
+        this.router = router;
     }
+    ItemRouteComponent.prototype.routerOnActivate = function (curr) {
+        var id = curr.getParam('id');
+        console.log(id);
+    };
     ItemRouteComponent = __decorate([
         core_1.Component({
-            directives: [item_description_component_1.ItemDescriptionComponent],
+            directives: [item_description_component_1.ItemDescriptionComponent, shop_item_component_1.ShopItemComponent],
             selector: 'item-route',
             templateUrl: 'app/templates/routes/item-route.template.html'
         }), 
-        __metadata('design:paramtypes', [item_service_1.ItemService])
+        __metadata('design:paramtypes', [item_service_1.ItemService, router_1.Router])
     ], ItemRouteComponent);
     return ItemRouteComponent;
 }());

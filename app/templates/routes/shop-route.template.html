@@ -21,7 +21,12 @@
 		<div class="container">
 			<div class="row centerText">
 				<div class="col-md-4" *ngFor="let item of itemService.inventory">
-					<shop-item [thumb1]= "item.thumb1" [name]= "item.name" [price]= "item.price"></shop-item>
+					<shop-item 
+						[thumb1]= "item.thumb1" 
+						[name]= "item.name" 
+						[price]= "item.price"
+						[id]= "item.id"
+					></shop-item>
 				</div>
 			</div>
 		</div>
