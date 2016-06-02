@@ -9,21 +9,13 @@ import { ItemService } from '../../services/item.service';
 })
 
 export class ShopItemComponent {
-	@Input() thumb1: any;
-	@Input() name: string;
-	@Input() id: number;
-	@Input() price: number;
+	@Input() currItem;
 
-	public currentItem: Object = {};
+	// private currentItem: Object = {};
 
 	constructor (private router: Router, private itemService: ItemService){}
 	
 	openProduct () {
-		this.router.navigate(["/item", this.id]);
-		let getItem = this.itemService.getItemByID(this.id);
-		console.log('This is getItem', getItem);
-		console.log('what type is currentItem?', typeof(this.currentItem));
-		let currentItem = getItem;
-		console.log( 'What is currentItem?' currentItem);
+		this.router.navigate(["/item", this.currItem.id]);
 	}
 }

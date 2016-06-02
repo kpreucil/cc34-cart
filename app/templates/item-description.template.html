@@ -1,25 +1,25 @@
-<div class="col-md-1">
+<div class="col-sm-1">
 	<div class="imgThumb" id="one">
-		<img src={{thumb1}} class="imgFit">
+		<img src={{currItem.thumb1}} class="imgFit">
 	</div> 
 	<div class="imgThumb" id="two">
-		<img src="{{thumb2}}">
+		<img src="{{currItem.thumb2}}" class="imgFit">
 	</div> 
 	<div class="imgThumb" id="three">
-		<img src="{{thumb3}}">
+		<img src="{{currItem.thumb3}}" class="imgFit">
 	</div> 
 </div>
-<div class="col-md-5 imgContainer">
+<div class="col-sm-5 imgContainer">
 	<!-- Img -->
-	<img src="{{img1}}">
+	<img src="{{currItem.img1}}" class="imgFit">
 </div>
-<div class="col-md-4">
-	<h2>{{name}}</h2>
-	<p>id: {{id}}</p>
-	<p>Description: <br /> {{description}}
+<div class="col-sm-4">
+	<h2>{{currItem.name}}</h2>
+	<p>id: {{currItem.id}}</p>
+	<p>Description: <br /> {{currItem.description}}
 	</p>
 </div>
-<div class="col-md-2">
+<div class="col-sm-2">
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   		<div class="panel panel-default">
     		<div class="panel-heading" role="tab" id="headingOne">
@@ -31,11 +31,11 @@
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       			<div class="list-group">
-        			<input type="checkbox" name="paper-print" value="8x10"> 8x10
+        			<input type="number" name="paper-print" value="8x10">&nbsp;<span class="tab">{{currItem.sizeSm}}</span>${{currItem.paperSm}}
         			<br />
-        			<input type="checkbox" name="paper-print" value="11x14"> 11x14
+        			<input type="number" name="paper-print" value="11x14">&nbsp;<span class="tab">{{currItem.sizeMd}}</span>${{currItem.paperMd}}
         			<br />
-					<input type="checkbox" name="paper-print" value="16x20"> 16x20
+					<input type="number" name="paper-print" value="16x20">&nbsp;<span class="tab">{{currItem.sizeLg}}</span>${{currItem.paperLg}}
       			</div>
     		</div>
   		</div>
@@ -49,11 +49,11 @@
     		</div>
     		<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       			<div class="list-group">
-		        	<input type="checkbox" name="canvas-print" value="8x10"> 8x10
+		        	<input type="number" name="canvas-print" value="8x10">&nbsp;<span class="tab">{{currItem.sizeSm}}</span>${{currItem.canvasSm}}
         			<br />
-        			<input type="checkbox" name="canvas-print" value="11x14"> 11x14
+        			<input type="number" name="canvas-print" value="11x14">&nbsp;<span class="tab">{{currItem.sizeMd}}</span>${{currItem.canvasMd}}
         			<br />
-					<input type="checkbox" name="canvas-print" value="16x20"> 16x20
+					<input type="number" name="canvas-print" value="16x20">&nbsp;<span class="tab">{{currItem.sizeLg}}</span>${{currItem.canvasLg}}
 		      	</div>
     		</div>
   		</div>

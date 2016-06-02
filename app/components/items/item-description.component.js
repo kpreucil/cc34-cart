@@ -15,43 +15,7 @@ var ItemDescriptionComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
-    ], ItemDescriptionComponent.prototype, "thumb1", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ItemDescriptionComponent.prototype, "thumb2", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ItemDescriptionComponent.prototype, "thumb3", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ItemDescriptionComponent.prototype, "img1", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ItemDescriptionComponent.prototype, "img2", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ItemDescriptionComponent.prototype, "img3", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ItemDescriptionComponent.prototype, "name", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], ItemDescriptionComponent.prototype, "id", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], ItemDescriptionComponent.prototype, "price", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ItemDescriptionComponent.prototype, "description", void 0);
+    ], ItemDescriptionComponent.prototype, "currItem", void 0);
     ItemDescriptionComponent = __decorate([
         core_1.Component({
             selector: 'item-desc',

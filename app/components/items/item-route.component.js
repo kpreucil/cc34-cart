@@ -12,7 +12,6 @@ var core_1 = require("@angular/core");
 var router_1 = require('@angular/router');
 var item_service_1 = require('../../services/item.service');
 var item_description_component_1 = require('../items/item-description.component');
-var shop_item_component_1 = require('../items/shop-item.component');
 var ItemRouteComponent = (function () {
     function ItemRouteComponent(itemService, router) {
         this.itemService = itemService;
@@ -21,10 +20,11 @@ var ItemRouteComponent = (function () {
     ItemRouteComponent.prototype.routerOnActivate = function (curr) {
         var id = curr.getParam('id');
         console.log(id);
+        this.currentItem = this.itemService.getItemByID(id);
     };
     ItemRouteComponent = __decorate([
         core_1.Component({
-            directives: [item_description_component_1.ItemDescriptionComponent, shop_item_component_1.ShopItemComponent],
+            directives: [item_description_component_1.ItemDescriptionComponent],
             selector: 'item-route',
             templateUrl: 'app/templates/routes/item-route.template.html'
         }), 
