@@ -1,0 +1,5 @@
+<div *ngFor="let cartItem of cartService.inventory">
+	<cart-item
+		[_cartItem] = "cartItem"
+	></cart-item>
+</div>

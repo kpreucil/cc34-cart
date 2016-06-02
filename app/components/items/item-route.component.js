@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var router_1 = require('@angular/router');
 var item_service_1 = require('../../services/item.service');
 var item_description_component_1 = require('../items/item-description.component');
+var cart_display_component_1 = require('../cart/cart-display.component');
 var ItemRouteComponent = (function () {
     function ItemRouteComponent(itemService, router) {
         this.itemService = itemService;
@@ -24,7 +25,7 @@ var ItemRouteComponent = (function () {
     };
     ItemRouteComponent = __decorate([
         core_1.Component({
-            directives: [item_description_component_1.ItemDescriptionComponent],
+            directives: [item_description_component_1.ItemDescriptionComponent, cart_display_component_1.CartDisplayComponent],
             selector: 'item-route',
             templateUrl: 'app/templates/routes/item-route.template.html'
         }), 

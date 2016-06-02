@@ -30,12 +30,14 @@
       			</h4>
     		</div>
     		<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      			<div class="list-group">
-        			<input type="number" name="paper-print" value="8x10">&nbsp;<span class="tab">{{currItem.sizeSm}}</span>${{currItem.paperSm}}
-        			<br />
-        			<input type="number" name="paper-print" value="11x14">&nbsp;<span class="tab">{{currItem.sizeMd}}</span>${{currItem.paperMd}}
-        			<br />
-					<input type="number" name="paper-print" value="16x20">&nbsp;<span class="tab">{{currItem.sizeLg}}</span>${{currItem.paperLg}}
+      			<div class="list-group centerText">
+      				<br />
+        			<input type="number" name="paper-print" value="8x10" [(ngModel)]="itemQuantities.paper_sm">&nbsp;<span class="tab">{{currItem.size.sm}}</span>${{currItem.price.paper.sm}}
+        			<br /><br />
+        			<input type="number" name="paper-print" value="11x14" [(ngModel)]="itemQuantities.paper_md">&nbsp;<span class="tab" >{{currItem.size.md}}</span>${{currItem.price.paper.md}}
+        			<br /><br />
+    					<input type="number" name="paper-print" value="16x20" [(ngModel)]="itemQuantities.paper_lg">&nbsp;<span class="tab">{{currItem.size.lg}}</span>${{currItem.price.paper.lg}}
+    					<br />
       			</div>
     		</div>
   		</div>
@@ -48,14 +50,17 @@
       			</h4>
     		</div>
     		<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      			<div class="list-group">
-		        	<input type="number" name="canvas-print" value="8x10">&nbsp;<span class="tab">{{currItem.sizeSm}}</span>${{currItem.canvasSm}}
-        			<br />
-        			<input type="number" name="canvas-print" value="11x14">&nbsp;<span class="tab">{{currItem.sizeMd}}</span>${{currItem.canvasMd}}
-        			<br />
-					<input type="number" name="canvas-print" value="16x20">&nbsp;<span class="tab">{{currItem.sizeLg}}</span>${{currItem.canvasLg}}
+      			<div class="list-group centerText">
+      				<br />
+		        	<input type="number" name="canvas-print" value="8x10" [(ngModel)]="itemQuantities.canvas_sm">&nbsp;<span class="tab">{{currItem.size.sm}}</span>${{currItem.price.canvas.sm}}
+        			<br /><br />
+        			<input type="number" name="canvas-print" value="11x14" [(ngModel)]="itemQuantities.canvas_md">&nbsp;<span class="tab">{{currItem.size.md}}</span>${{currItem.price.canvas.md}}
+        			<br /><br />
+    					<input type="number" name="canvas-print" value="16x20" [(ngModel)]="itemQuantities.canvas_lg">&nbsp;<span class="tab">{{currItem.size.lg}}</span>${{currItem.price.canvas.lg}}
+    					<br />
 		      	</div>
     		</div>
   		</div>
 	</div>
+  <button (click)="addToCart()">Add To Cart</button>
 </div>

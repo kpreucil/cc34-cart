@@ -9,9 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var cart_service_1 = require('../../services/cart.service');
 var ItemDescriptionComponent = (function () {
-    function ItemDescriptionComponent() {
+    function ItemDescriptionComponent(cartService) {
+        this.cartService = cartService;
+        this.itemQuantities = {
+            paper_sm: 0,
+            paper_md: 0,
+            paper_lg: 0,
+            canvas_sm: 0,
+            canvas_md: 0,
+            canvas_lg: 0
+        };
     }
+    ItemDescriptionComponent.prototype.addToCart = function () {
+        this.cartService.inventory.push({ item: this.currItem, quantity: this.itemQuantities });
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
@@ -21,7 +34,7 @@ var ItemDescriptionComponent = (function () {
             selector: 'item-desc',
             templateUrl: 'app/templates/item-description.template.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [cart_service_1.CartService])
     ], ItemDescriptionComponent);
     return ItemDescriptionComponent;
 }());

@@ -9,22 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var shop_item_component_1 = require('../items/shop-item.component');
-var item_service_1 = require('../../services/item.service');
-var cart_display_component_1 = require('../cart/cart-display.component');
-var ShopRouteComponent = (function () {
-    function ShopRouteComponent(itemService) {
-        this.itemService = itemService;
+// import { Router } from "@angular/router";
+// import { ItemService } from '../../services/item.service';
+var CartDisplayComponent = (function () {
+    function CartDisplayComponent() {
     }
-    ShopRouteComponent = __decorate([
+    CartDisplayComponent = __decorate([
         core_1.Component({
-            directives: [shop_item_component_1.ShopItemComponent, cart_display_component_1.CartDisplayComponent],
-            selector: 'shop',
-            templateUrl: 'app/templates/routes/shop-route.template.html'
+            selector: 'cart-display',
+            templateUrl: 'app/templates/cart-display.template.html'
         }), 
-        __metadata('design:paramtypes', [item_service_1.ItemService])
-    ], ShopRouteComponent);
-    return ShopRouteComponent;
+        __metadata('design:paramtypes', [])
+    ], CartDisplayComponent);
+    return CartDisplayComponent;
 }());
-exports.ShopRouteComponent = ShopRouteComponent;
-//# sourceMappingURL=shop-route.component.js.map
+exports.CartDisplayComponent = CartDisplayComponent;
+//# sourceMappingURL=cart-display.component.js.map

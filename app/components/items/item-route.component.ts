@@ -4,9 +4,10 @@ import { OnActivate, Router, RouteSegment } from '@angular/router';
 
 import { ItemService } from '../../services/item.service';
 import { ItemDescriptionComponent } from '../items/item-description.component';
+import { CartDisplayComponent } from '../cart/cart-display.component';
 
 @Component({
-	directives: [ItemDescriptionComponent],
+	directives: [ItemDescriptionComponent, CartDisplayComponent],
 	selector: 'item-route',
 	templateUrl: 'app/templates/routes/item-route.template.html'
 })
