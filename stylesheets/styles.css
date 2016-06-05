@@ -1,6 +1,10 @@
 body {
 	font-family: 'Raleway', sans-serif;
 }
+.derivia {
+	font-family: 'deriviaregular';
+	letter-spacing: 1px;
+}
 
 /* Colors */
 .yellow {
@@ -18,7 +22,13 @@ body {
 .drkbrown {
 	background-color: #726969;
 }
+.drkbrownText {
+	color: #726969;
+}
 
+.beigeText {
+	color: #CFCABD;
+}
 /* Padding */
 .pad-top-5 {
 	padding: 2%;
@@ -174,10 +184,65 @@ a:active {
 
 }
 
+/* Home */
+.mainSlideContainer {
+	height: 450px;
+	margin-bottom: 15%;
+	margin-top: 3%;
+}
 
+.mainImg {
+	/*width: 100%;*/
+	height: 100%;
+	position: absolute;
+}
+.splatter {
+	position: absolute;
+	z-index: -1;
+	width: 40%;
+	margin-top: -10%;
+	margin-left: 60%;
 
+}
+.circleHome {
+	position: absolute;
+	z-index: -1;
+	/*width: 40%;*/
+	margin-top: 45%;
+	margin-left: -3%;
+}
 
+.circleSize {
+	height: 50%;
+}
 
+/* Testimonial Styles */
+.test-margin {
+	padding-top: 5%;
+	color: #726969;
+}
 
+.testCat {
+	color: #CFCABD;
+	font-family: 'Raleway';
+	font-size: 14px;
+}
+
+.testTitle {
+	/*color: #CFCABD;*/
+	font-size: 20px;
+}
+
+/* About */
+
+.aboutImg {
+	width: 100%;
+	margin-left: -2%;
+}
+
+.me {
+	height: 60%;
+	margin-left: 15%;
+}
 
 

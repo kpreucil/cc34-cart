@@ -7,11 +7,14 @@ import { NavComponent } from './components/navigation/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ItemRouteComponent } from './components/items/item-route.component';
 import { CartRouteComponent } from './components/cart/cart-route.component';
+import { HomeRouteComponent } from './components/home/home-route.component';
+import { AboutRouteComponent } from './components/about/about-route.component';
+
 
 
 @Component({
   selector: 'angular-app',
-  directives: [ROUTER_DIRECTIVES, ItemRouteComponent, FooterComponent, NavComponent, ShopRouteComponent, CartRouteComponent],
+  directives: [ROUTER_DIRECTIVES, ItemRouteComponent, FooterComponent, NavComponent, ShopRouteComponent, CartRouteComponent, HomeRouteComponent, AboutRouteComponent],
   template: `
   	<navigation></navigation>
   	<div>
@@ -21,6 +24,14 @@ import { CartRouteComponent } from './components/cart/cart-route.component';
   `
 })
 @Routes([
+    {
+      path: '/home',
+      component: HomeRouteComponent
+    },
+    {
+      path: '/about',
+      component: AboutRouteComponent
+    },
 	{
 		path: '/shop',
 		component: ShopRouteComponent
