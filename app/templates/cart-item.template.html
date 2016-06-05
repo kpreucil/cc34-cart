@@ -1,19 +1,31 @@
 <div class="container">
 	<div class="row">
-		<div class="col-sm-2">
-		</div>
-		<div class="col-sm-3">
-		<img src="{{currItem.thumb1}}">
-		</div>
-		<div class="col-sm-3">
+		<div class="col-sm-1">
+			<!-- blank space -->
 		</div>
 		<div class="col-sm-1">
-		<p>{{currItem.sizeSm}}</p>
-		</div>
-		<div class="col-sm-1">
-		<p>{{currItem.paperSm}} delete</p>
+		<img src="{{item.thumb1}}">
 		</div>
 		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-7">
+		<p>{{item.name}} {{item.id}}</p>
+		</div>
+		<div class="col-sm-1">
+		<!-- blank space -->
 		</div>
 	</div>
+</div>
+
+<div *ngFor="let type of getAllItemTypes()">
+    <div *ngFor="let size of getAllItemSizes()">
+        <div *ngIf="quantity[type][size] > 0">
+            <p>raw type: {{type}}</p>
+            <p>raw size: {{size}}</p>
+            <p>quantity: {{quantity[type][size]}}</p>
+            <p>real size: {{item.size[size]}}</p>
+            <p>unit price: {{item.price[type][size]}}</p>
+            <p>total price: ${{item.price[type][size] * quantity[type][size]}}</p>
+        </div>
+    </div>
 </div>

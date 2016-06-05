@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 import { CartService } from '../../services/cart.service';
 
@@ -11,18 +12,32 @@ export class ItemDescriptionComponent {
 	@Input() currItem;
 
 	private itemQuantities = {
-		paper_sm: 0,
-		paper_md: 0,
-		paper_lg: 0,
-		canvas_sm: 0,
-		canvas_md: 0,
-		canvas_lg: 0
+			paper: {
+				sm: 0,
+				md: 0,
+				lg: 0
+			},
+			canvas: {
+				sm: 0,
+				md: 0,
+				lg: 0
+			}
+		};
+
+	constructor(
+		private router: Router, 
+		private cartService: CartService) { }
+
+	openCart() {
+		this.router.navigate(["/cart"]);
 	}
 
-	constructor (private cartService: CartService){}
-
-
 	addToCart () {
-		this.cartService.inventory.push({item: this.currItem, quantity: this.itemQuantities})
+		// this.cartService.inventory.push({item: this.currItem, quantity: this.itemQuantities})
+		console.log( 'this is the currItem in addToCart', this.currItem);
+		this.cartService.pushToCart(this.currItem, this.itemQuantities);
+
+		//redirect to cart page?
+		this.openCart();
 	}
 }

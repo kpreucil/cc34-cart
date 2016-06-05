@@ -9,22 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var CartDisplayComponent = (function () {
-    function CartDisplayComponent(router) {
-        this.router = router;
+var cart_item_component_1 = require('../cart/cart-item.component');
+var cart_total_component_1 = require('../cart/cart-total.component');
+var cart_service_1 = require('../../services/cart.service');
+var CartRouteComponent = (function () {
+    function CartRouteComponent(cartService) {
+        this.cartService = cartService;
     }
-    CartDisplayComponent.prototype.goToCart = function () {
-        this.router.navigate(["/cart"]);
-    };
-    CartDisplayComponent = __decorate([
+    CartRouteComponent = __decorate([
         core_1.Component({
-            selector: 'cart-display',
-            templateUrl: 'app/templates/cart-display.template.html'
+            directives: [cart_item_component_1.CartItemComponent, cart_total_component_1.CartTotalComponent],
+            selector: 'cart',
+            templateUrl: 'app/templates/routes/cart-route.template.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], CartDisplayComponent);
-    return CartDisplayComponent;
+        __metadata('design:paramtypes', [cart_service_1.CartService])
+    ], CartRouteComponent);
+    return CartRouteComponent;
 }());
-exports.CartDisplayComponent = CartDisplayComponent;
-//# sourceMappingURL=cart-display.component.js.map
+exports.CartRouteComponent = CartRouteComponent;
+//# sourceMappingURL=cart-route.component.js.map

@@ -13,7 +13,9 @@ export class ShopItemComponent {
 
 	// private currentItem: Object = {};
 
-	constructor (private router: Router, private itemService: ItemService){}
+	constructor (
+		private router: Router, 
+		private itemService: ItemService){}
 	
 	openProduct () {
 		this.router.navigate(["/item", this.currItem.id]);

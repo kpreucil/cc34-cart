@@ -12,6 +12,29 @@ var core_1 = require("@angular/core");
 var CartItemComponent = (function () {
     function CartItemComponent() {
     }
+    CartItemComponent.prototype.getAllItemTypes = function () {
+        return Object.keys(this.quantity);
+    };
+    CartItemComponent.prototype.getAllItemSizes = function () {
+        var sizes = [];
+        for (var type in this.quantity) {
+            for (var size in this.quantity[type]) {
+                if (sizes.indexOf(size) == -1) {
+                    sizes.push(size);
+                }
+            }
+        }
+        console.log(sizes);
+        return sizes;
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], CartItemComponent.prototype, "item", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], CartItemComponent.prototype, "quantity", void 0);
     CartItemComponent = __decorate([
         core_1.Component({
             selector: 'cart-item',

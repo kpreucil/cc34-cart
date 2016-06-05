@@ -9,21 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var cart_service_1 = require('../../services/cart.service');
 var ItemDescriptionComponent = (function () {
-    function ItemDescriptionComponent(cartService) {
+    function ItemDescriptionComponent(router, cartService) {
+        this.router = router;
         this.cartService = cartService;
         this.itemQuantities = {
-            paper_sm: 0,
-            paper_md: 0,
-            paper_lg: 0,
-            canvas_sm: 0,
-            canvas_md: 0,
-            canvas_lg: 0
+            paper: {
+                sm: 0,
+                md: 0,
+                lg: 0
+            },
+            canvas: {
+                sm: 0,
+                md: 0,
+                lg: 0
+            }
         };
     }
+    ItemDescriptionComponent.prototype.openCart = function () {
+        this.router.navigate(["/cart"]);
+    };
     ItemDescriptionComponent.prototype.addToCart = function () {
-        this.cartService.inventory.push({ item: this.currItem, quantity: this.itemQuantities });
+        // this.cartService.inventory.push({item: this.currItem, quantity: this.itemQuantities})
+        console.log('this is the currItem in addToCart', this.currItem);
+        this.cartService.pushToCart(this.currItem, this.itemQuantities);
+        //redirect to cart page?
+        this.openCart();
     };
     __decorate([
         core_1.Input(), 
@@ -34,7 +47,7 @@ var ItemDescriptionComponent = (function () {
             selector: 'item-desc',
             templateUrl: 'app/templates/item-description.template.html'
         }), 
-        __metadata('design:paramtypes', [cart_service_1.CartService])
+        __metadata('design:paramtypes', [router_1.Router, cart_service_1.CartService])
     ], ItemDescriptionComponent);
     return ItemDescriptionComponent;
 }());
