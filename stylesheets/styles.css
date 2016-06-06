@@ -173,15 +173,16 @@ a:active {
 /* CART */
 /* display */
 .cartDisplay {
-	background-color: #BAE0CE;
+	background-color: rgba(186, 224, 206, .5);
 	color: #726969;
 	padding-top: .5%;
 	margin-top: -6%;
 }
-
-/* items */
-.cartItem {
-
+.checkOut {
+	font-size: 15px;
+	color: #CFCABD;
+	border: 1px solid #CFCABD;
+	padding: 1%;
 }
 
 /* Home */
@@ -243,6 +244,50 @@ a:active {
 .me {
 	height: 60%;
 	margin-left: 15%;
+	margin-top: -5%;
 }
 
+/* Accordian */
 
+/* Style the buttons that are used to open and close the accordion panel */
+button.myAccordion {
+	font-family: 'deriviaregular';
+    background-color: white;
+    color: #726969;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.myAccordion.active, button.myAccordion:hover {
+    background-color: rgba(250, 243, 161, .25);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.myPanel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.myPanel.show {
+    display: block !important;
+    border-right: 1px solid #726969;
+    border-bottom: 1px solid #726969;
+    border-left: 1px solid #726969;
+}
+
+/* Button */
+
+button {
+	background-color: rgba(255, 255, 255, 0);
+	/*border: 1px solid #726969;*/
+	border: rgba(255, 255, 255, 0);
+}

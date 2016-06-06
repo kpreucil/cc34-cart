@@ -9,7 +9,15 @@
 		<div class="col-sm-2">
 		</div>
 		<div class="col-sm-7">
-		<p>{{item.name}} {{item.id}}</p>
+			<div *ngFor="let type of getAllItemTypes()">
+				<div *ngFor="let size of getAllItemSizes()">
+					<div *ngIf="quantity[type][size] > 0">
+						<h3>{{item.name}}</h3> 
+						<p><span class="tab">Item #: {{item.id}}</span></p>
+						<p> Quantity: <span class="tab">{{quantity[type][size]}}</span>Type: <span class="tab">{{type}}</span><span class="tab">Size: {{item.size[size]}}</span><span class="tab">Unit Price: ${{item.price[type][size]}}</span><span class="tab">Total: ${{item.price[type][size] * quantity[type][size]}}</span></p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="col-sm-1">
 		<!-- blank space -->
@@ -17,7 +25,8 @@
 	</div>
 </div>
 
-<div *ngFor="let type of getAllItemTypes()">
+<!-- How to print all Info -->
+<!-- <div *ngFor="let type of getAllItemTypes()">
     <div *ngFor="let size of getAllItemSizes()">
         <div *ngIf="quantity[type][size] > 0">
             <p>raw type: {{type}}</p>
@@ -28,4 +37,4 @@
             <p>total price: ${{item.price[type][size] * quantity[type][size]}}</p>
         </div>
     </div>
-</div>
+</div> -->

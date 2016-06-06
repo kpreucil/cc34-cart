@@ -1,10 +1,11 @@
-<div>
-	<h1>Your Cart</h1>
+<div class="container derivia drkBrownText margin-top-nav">
+	<h1>&raquo;&raquo; Your Cart</h1>
 </div>
-<div *ngFor="let c of cartService.inventory">
+<div *ngFor="let c of cartService.inventory" class="margin-top-nav">
 	<cart-item
 		[item] = "c.item"
 		[quantity] = "c.quantity"
 	></cart-item>
-	<cart-total></cart-total>
+	<hr />
 </div>
+<cart-total></cart-total>

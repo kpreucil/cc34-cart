@@ -5,6 +5,7 @@ import { HTTP_PROVIDERS } from '@angular/http';
 
 import { ItemService } from './services/item.service';
 import { CartService } from './services/cart.service';
+import { InfoService } from './services/info.service';
 
 
-bootstrap(AppComponent, [ROUTER_PROVIDERS, HTTP_PROVIDERS, ItemService, CartService]);
+bootstrap(AppComponent, [ROUTER_PROVIDERS, HTTP_PROVIDERS, ItemService, CartService, InfoService]);

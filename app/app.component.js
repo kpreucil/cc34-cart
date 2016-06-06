@@ -17,6 +17,7 @@ var item_route_component_1 = require('./components/items/item-route.component');
 var cart_route_component_1 = require('./components/cart/cart-route.component');
 var home_route_component_1 = require('./components/home/home-route.component');
 var about_route_component_1 = require('./components/about/about-route.component');
+var info_route_component_1 = require('./components/info/info-route.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -34,6 +35,10 @@ var AppComponent = (function () {
             {
                 path: '/about',
                 component: about_route_component_1.AboutRouteComponent
+            },
+            {
+                path: '/info',
+                component: info_route_component_1.InfoRouteComponent
             },
             {
                 path: '/shop',
