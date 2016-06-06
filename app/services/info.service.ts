@@ -9,12 +9,12 @@ export class InfoService {
 			content: ["The Lavish Craft Design Services are here to make your life easier and your business more beautiful. I offer many services ranging from print to web design to ensure all your business needs are taken care of. When we work together I am more than just a graphic designer, I am someone who cares about you and your goals and am happy to act as a sounding board for your ideas and help guide you through the design process. My aim is to create a design you love that is an effective marketing tool for years. Although I focus on Logo and Brand Development, I love the smaller projects too. Download the Lavish Craft Media Kit to see package details and pricing for the services I offer. On the off chance that you don’t see what you are searching for, get in touch with me and I will let you know whether I can help you."]
 		},
 		{
-			title: "Consultation Service",
-			content: ["Do you already have a graphic designer or a web developer but don’t know how to ask for what you want? Or maybe you’re not even sure what you want to even begin asking for. You are not alone. I have come across this problem many times and if you aren’t in the position to work with me directly I do offer consultation services at an hourly rate."]
-		},
-		{
 			title: "Retainer Design Service",
 			content: ["Many of my clients are business owners I have worked with on branding and discover they need design assistance to maintain updated information in their branding style or have small design projects to do and either don’t have the time or the skills necessary to do so. The Retainer Design Service that I offer might be the perfect solution for you if you find yourself with a similar problem. Monthly retainers provided ongoing support at a discounted rate and start with a minimum of a three month contract (the discount rates may be found in my media kit). After discussing your needs to determine if this is the right service for you and that we will work well together I will draw up a contract specifying a certain amount of my time that I will dedicate each month to working on your projects for the appropriate discounted hourly rate. This service does not cover logo and branding design, website design creation, or other similar projects."]
+		},
+		{
+			title: "Consultation Service",
+			content: ["Do you already have a graphic designer or a web developer but don’t know how to ask for what you want? Or maybe you’re not even sure what you want to even begin asking for. You are not alone. I have come across this problem many times and if you aren’t in the position to work with me directly I do offer consultation services at an hourly rate."]
 		},
 		{
 			title: "Print Management Service",

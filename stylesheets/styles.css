@@ -250,10 +250,10 @@ a:active {
 /* Accordian */
 
 /* Style the buttons that are used to open and close the accordion panel */
-button.myAccordion {
+.myAccordion {
 	font-family: 'deriviaregular';
     background-color: white;
-    color: #726969;
+    color: #CFCABD;
     cursor: pointer;
     padding: 10px;
     width: 100%;
@@ -262,26 +262,40 @@ button.myAccordion {
     outline: none;
     transition: 0.4s;
     text-align: center;
+    /*background-image: '../assets/brand-elements/acc-arrow-left-02.svg';*/
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-button.myAccordion.active, button.myAccordion:hover {
-    background-color: rgba(250, 243, 161, .25);
+.myAccordion.active, .myAccordion:hover {
+    /*background-color: rgba(250, 243, 161, .25);*/
+    /*font-size: 18px;*/
+    color: #726969;
 }
 
+/*.myAccordion.active:after {
+}*/
+
 /* Style the accordion panel. Note: hidden by default */
-div.myPanel {
-    padding: 0 18px;
+.myPanel {
+    /*padding: 0 18px;*/
     background-color: white;
     display: none;
 }
 
 /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-div.myPanel.show {
-    display: block !important;
-    border-right: 1px solid #726969;
-    border-bottom: 1px solid #726969;
-    border-left: 1px solid #726969;
+#info:active, .myPanel {
+    display: block;
+    border: 1px solid #726969;
+    padding: 5%;
+    margin-top: 3%;
+    color: #726969;
+}
+
+.accArrows {
+	position: absolute;
+	width: 70%;
+	margin-left: -35%;
+	margin-top: -2%;
 }
 
 /* Button */

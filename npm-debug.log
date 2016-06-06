@@ -26,7 +26,7 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid shopping-cart@1.0.0
 16 verbose cwd /Users/kpreucil/node/codecraft/cc34-cart
-17 error Darwin 15.4.0
+17 error Darwin 15.5.0
 18 error argv "/usr/local/Cellar/node/5.10.0/bin/node" "/usr/local/bin/npm" "start"
 19 error node v5.10.0
 20 error npm  v3.8.3

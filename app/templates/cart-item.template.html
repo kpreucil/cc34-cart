@@ -35,6 +35,7 @@
             <p>real size: {{item.size[size]}}</p>
             <p>unit price: {{item.price[type][size]}}</p>
             <p>total price: ${{item.price[type][size] * quantity[type][size]}}</p>
+            <p> cart total: {{cartService.getCartTotal()}} </p>
         </div>
     </div>
 </div> -->

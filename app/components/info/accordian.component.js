@@ -9,21 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+// import {enableProdMode} from '@angular/core';
 var info_service_1 = require('../../services/info.service');
+// enableProdMode();
 var AccordianComponent = (function () {
     function AccordianComponent(infoService) {
         this.infoService = infoService;
     }
-    AccordianComponent.prototype.showInfo = function () {
-        /* Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons. The "active" class is used to add a background color to the current button when its belonging panel is open. The "show" class is used to open the specific accordion panel */
-        var acc = document.getElementsByClassName("myAccordion");
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].onclick = function () {
-                this.classList.toggle("active");
-                this.nextElementSibling.classList.toggle("show");
-            };
-        }
-    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)

@@ -10,7 +10,8 @@ import { CartService } from '../../services/cart.service';
 
 export class CartDisplayComponent {
 	constructor(
-		private router: Router){}
+		private router: Router,
+		private cartService: CartService) { }
 	
 	goToCart() {
 		this.router.navigate(["/cart"]);

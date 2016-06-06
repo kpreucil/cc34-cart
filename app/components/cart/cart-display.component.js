@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var cart_service_1 = require('../../services/cart.service');
 var CartDisplayComponent = (function () {
-    function CartDisplayComponent(router) {
+    function CartDisplayComponent(router, cartService) {
         this.router = router;
+        this.cartService = cartService;
     }
     CartDisplayComponent.prototype.goToCart = function () {
         this.router.navigate(["/cart"]);
@@ -22,7 +24,7 @@ var CartDisplayComponent = (function () {
             selector: 'cart-display',
             templateUrl: 'app/templates/cart-display.template.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, cart_service_1.CartService])
     ], CartDisplayComponent);
     return CartDisplayComponent;
 }());

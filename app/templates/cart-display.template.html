@@ -3,7 +3,7 @@
 		<div class="col-sm-9">
 		 </div>
 		 <div class="col-sm-3 centerText cartDisplay">
-		 	<p><span class="tab">quantity + $total</span> <button (click)="goToCart()">Go To Cart</button></p>
+		 	<p><span class="tab">Items in your cart: {{cartService.getCartItemCount()}} ||  ${{cartService.getCartTotal()}}.00</span> <button (click)="goToCart()">Go To Cart</button></p>
 		 </div>
 	</div>
 </div>

@@ -12,6 +12,8 @@ export class CartItemComponent {
 	@Input() item;
 	@Input() quantity;
 
+	constructor(private cartService: CartService){}
+
 	getAllItemTypes() {
 		return Object.keys(this.quantity);
 	}

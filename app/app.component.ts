@@ -25,7 +25,7 @@ import { InfoRouteComponent } from './components/info/info-route.component';
 })
 @Routes([
     {
-      path: '/home',
+      path: '/',
       component: HomeRouteComponent
     },
     {

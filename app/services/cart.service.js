@@ -23,7 +23,8 @@ var CartService = (function () {
         });
         console.log('this is the cart inventory', this.inventory);
         this.getCartItemCount();
-        this.getCartMoneyTotal();
+        this.getCartTotal();
+        // this.getCartTotal(itemTotals);
     };
     CartService.prototype.getCartItemCount = function () {
         var sum = 0;
@@ -38,9 +39,9 @@ var CartService = (function () {
             }
         }
         console.log('this is the cartItem count', sum);
-        return sum; //returns 0?
+        return sum;
     };
-    CartService.prototype.getCartMoneyTotal = function () {
+    CartService.prototype.getCartTotal = function () {
         var sum = 0;
         for (var i = 0; i < this.inventory.length; i++) {
             var item = this.inventory[i].item;
@@ -51,8 +52,10 @@ var CartService = (function () {
                 }
             }
         }
-        console.log('this is the cartMoneyTotal', sum);
-        return sum;
+        console.log('this is the cartTotal', sum);
+        this.totals = sum;
+        console.log('this.totals', this.totals);
+        return this.totals;
     };
     CartService = __decorate([
         core_1.Injectable(), 

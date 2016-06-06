@@ -29,7 +29,7 @@ var AppComponent = (function () {
         }),
         router_1.Routes([
             {
-                path: '/home',
+                path: '/',
                 component: home_route_component_1.HomeRouteComponent
             },
             {

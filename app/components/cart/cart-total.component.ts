@@ -9,6 +9,10 @@ import { CartService } from '../../services/cart.service';
 })
 
 export class CartTotalComponent {
+
+	constructor(private cartService: CartService) { }
+	// @Input() item;
+	// @Input() quantity;
 	// constructor(
 	// 	private router: Router) { }
 
