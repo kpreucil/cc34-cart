@@ -9,24 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var cart_service_1 = require('../../services/cart.service');
-var NavComponent = (function () {
-    function NavComponent(router, cartService) {
-        this.router = router;
-        this.cartService = cartService;
+var PortfolioItemComponent = (function () {
+    function PortfolioItemComponent() {
     }
-    NavComponent.prototype.goToRoute = function (route) {
-        this.router.navigate([route]);
-    };
-    NavComponent = __decorate([
+    PortfolioItemComponent = __decorate([
         core_1.Component({
-            selector: 'navigation',
-            templateUrl: 'app/templates/nav.template.html'
+            selector: 'portfolio-item',
+            templateUrl: 'app/templates/routes/portfolio-route.template.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router, cart_service_1.CartService])
-    ], NavComponent);
-    return NavComponent;
+        __metadata('design:paramtypes', [])
+    ], PortfolioItemComponent);
+    return PortfolioItemComponent;
 }());
-exports.NavComponent = NavComponent;
-//# sourceMappingURL=nav.component.js.map
+exports.PortfolioItemComponent = PortfolioItemComponent;
+//# sourceMappingURL=portfolio.component.js.map

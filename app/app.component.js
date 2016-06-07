@@ -18,6 +18,7 @@ var cart_route_component_1 = require('./components/cart/cart-route.component');
 var home_route_component_1 = require('./components/home/home-route.component');
 var about_route_component_1 = require('./components/about/about-route.component');
 var info_route_component_1 = require('./components/info/info-route.component');
+// import { PortfolioRouteComponent } from './components/portfolio/portfolio-route.component';
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -40,6 +41,10 @@ var AppComponent = (function () {
                 path: '/info',
                 component: info_route_component_1.InfoRouteComponent
             },
+            // {
+            //   path: '/portfolio',
+            //   component: PortfolioRouteComponent
+            // },
             {
                 path: '/shop',
                 component: shop_route_component_1.ShopRouteComponent

@@ -10,12 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var testimonials_component_1 = require('../home/testimonials.component');
+var portfolio_item_component_1 = require('../portfolio/portfolio-item.component');
 var HomeRouteComponent = (function () {
     function HomeRouteComponent() {
     }
     HomeRouteComponent = __decorate([
         core_1.Component({
-            directives: [testimonials_component_1.TestimonialsComponent],
+            directives: [testimonials_component_1.TestimonialsComponent, portfolio_item_component_1.PortfolioItemComponent],
             selector: '/home',
             templateUrl: 'app/templates/routes/home-route.template.html'
         }), 

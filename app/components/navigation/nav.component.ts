@@ -1,6 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
 
+import { CartService } from '../../services/cart.service';
 
 @Component({
 	selector: 'navigation',
@@ -8,7 +9,10 @@ import { Router } from "@angular/router";
 })
 
 export class NavComponent {
-	constructor (private router: Router) {
+	constructor (
+		private router: Router,
+		private cartService: CartService
+		) {
 
 	}
 	goToRoute(route) {

@@ -1,9 +1,10 @@
 import { Component, Input } from "@angular/core";
 
 import { TestimonialsComponent } from '../home/testimonials.component';
+import { PortfolioItemComponent } from '../portfolio/portfolio-item.component';
 
 @Component({
-	directives: [TestimonialsComponent],
+	directives: [TestimonialsComponent, PortfolioItemComponent],
 	selector: '/home',
 	templateUrl: 'app/templates/routes/home-route.template.html'
 })

@@ -15,6 +15,10 @@ body {
 	background-color: #BAE0CE;
 }
 
+.aquaText {
+	color: #BAE0CE;
+}
+
 .beige {
 	background-color: #CFCABD;
 }
@@ -173,16 +177,38 @@ a:active {
 /* CART */
 /* display */
 .cartDisplay {
-	background-color: rgba(186, 224, 206, .5);
+	/*background-color: rgba(186, 224, 206, .5);*/
 	color: #726969;
-	padding-top: .5%;
+	/*padding-top: 10%;*/
 	margin-top: -6%;
+}
+.cartButton {
+	margin-left: -20%;
+	width: 35%;
+	z-index: -1;
+	position: absolute;
+}
+.cartNav {
+	width: 42%;
+	margin-top: -12%;
+	margin-bottom: -11%;
+	margin-left: -10%;
+}
+.itemCount {
+	margin-top: 5%;
+	margin-left: 10%;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'deriviaregular';
 }
 .checkOut {
 	font-size: 15px;
 	color: #CFCABD;
 	border: 1px solid #CFCABD;
 	padding: 1%;
+}
+.delete {
+	width: 3%;
 }
 
 /* Home */
@@ -304,4 +330,21 @@ button {
 	background-color: rgba(255, 255, 255, 0);
 	/*border: 1px solid #726969;*/
 	border: rgba(255, 255, 255, 0);
+}
+
+/* Portfolio */
+
+.portfolioSoon {
+	width: 75%;
+	margin-left: 12%;
+	margin-top: 8%;
+}
+
+.portfolioBorder {
+	border: 10px solid rgba(186, 224, 206, .5);
+	display: block;
+	width: 900px;
+	height: 350px;
+	margin-left: 10%;
+
 }

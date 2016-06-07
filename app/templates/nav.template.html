@@ -29,13 +29,13 @@
 							<div class="col-md-1">
 							</div>
 							<div class="col-md-3">
-								<p>Portfolio</p>
+							<p><a (click)="goToRoute('/shop')">Art Shop</a></p>
 							</div>
 							<div class="col-md-3">
-					  	 		<p><a (click)="goToRoute('/shop')">Art Shop</a></p>
+					  	 		<p>Contact</p>
 							</div>
 							<div class="col-md-3">
-								<p>Contact</p>
+								<p><a (click)="goToRoute('/cart')"><img src="../../assets/brand-elements/cart.svg" class="cartNav"> Cart {{cartService.getCartItemCount()}}</a></p>
 							</div>
 							<div class="col-md-1">
 							</div>

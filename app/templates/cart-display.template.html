@@ -2,8 +2,11 @@
 	<div class="row">
 		<div class="col-sm-9">
 		 </div>
-		 <div class="col-sm-3 centerText cartDisplay">
-		 	<p><span class="tab">Items in your cart: {{cartService.getCartItemCount()}} ||  ${{cartService.getCartTotal()}}.00</span> <button (click)="goToCart()">Go To Cart</button></p>
+		 <div class="col-sm-3 centerText cartDisplay" (click)="goToCart()">
+		 	<div>
+		 		<img src="../../assets/brand-elements/cart-button-13.svg" class="cartButton">
+		 	</div>
+	 		<p class="itemCount">{{cartService.getCartItemCount()}}</p>
 		 </div>
 	</div>
 </div>

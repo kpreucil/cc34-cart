@@ -10,6 +10,7 @@ import { CartRouteComponent } from './components/cart/cart-route.component';
 import { HomeRouteComponent } from './components/home/home-route.component';
 import { AboutRouteComponent } from './components/about/about-route.component';
 import { InfoRouteComponent } from './components/info/info-route.component';
+// import { PortfolioRouteComponent } from './components/portfolio/portfolio-route.component';
 
 
 @Component({
@@ -36,6 +37,10 @@ import { InfoRouteComponent } from './components/info/info-route.component';
       path: '/info',
       component: InfoRouteComponent
     },
+    // {
+    //   path: '/portfolio',
+    //   component: PortfolioRouteComponent
+    // },
 	{
 		path: '/shop',
 		component: ShopRouteComponent
