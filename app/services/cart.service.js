@@ -26,15 +26,26 @@ var CartService = (function () {
         this.getCartTotal();
         // this.getCartTotal(itemTotals);
     };
+    CartService.prototype.deleteFromCart = function (item) {
+        for (var i = 0; i < this.inventory.length; i++) {
+            if (this.inventory[i].item == item) {
+                this.inventory.splice(i, 1);
+                return;
+            }
+        }
+    };
     CartService.prototype.getCartItemCount = function () {
         var sum = 0;
         // debugger;
         for (var i = 0; i < this.inventory.length; i++) {
-            console.log(this.inventory[i].quantity);
+            console.log('this is getCartItemCount', this.inventory[i].quantity);
             for (var type in this.inventory[i].quantity) {
-                console.log(type);
+                console.log('this is type getCartItemCount', type);
                 for (var size in this.inventory[i].quantity[type]) {
-                    sum += this.inventory[i].quantity[type][size];
+                    var num = parseInt(this.inventory[i].quantity[type][size]);
+                    if (num) {
+                        sum += num;
+                    }
                 }
             }
         }

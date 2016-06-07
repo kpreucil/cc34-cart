@@ -22,15 +22,28 @@ export class CartService {
 		// this.getCartTotal(itemTotals);
 	}
 
+	deleteFromCart (item) {
+		for (let i = 0; i < this.inventory.length; i++) {
+			if (this.inventory[i].item == item) {
+				this.inventory.splice(i, 1);
+				return;
+			}
+		}
+	}
+
 	getCartItemCount() {
 		let sum = 0;
 		// debugger;
 		for (let i = 0; i < this.inventory.length; i++) {
-			console.log(this.inventory[i].quantity);
+			console.log('this is getCartItemCount', this.inventory[i].quantity);
 			for (let type in this.inventory[i].quantity) {
-				console.log(type);
+				console.log('this is type getCartItemCount', type);
 				for (let size in this.inventory[i].quantity[type]) {
-					sum += this.inventory[i].quantity[type][size];
+					let num = parseInt(this.inventory[i].quantity[type][size]);
+					if (num) {
+						sum += num;
+					}
+					
 				}
 			}
 		}

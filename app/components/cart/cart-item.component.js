@@ -29,6 +29,9 @@ var CartItemComponent = (function () {
         console.log(sizes);
         return sizes;
     };
+    CartItemComponent.prototype.deleteItem = function (item) {
+        this.cartService.deleteFromCart(item);
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)

@@ -11,10 +11,17 @@
 		<div class="col-sm-7">
 			<div *ngFor="let type of getAllItemTypes()">
 				<div *ngFor="let size of getAllItemSizes()">
-					<div *ngIf="quantity[type][size] > 0">
+					<div *ngIf="quantity[type][size] > 0 || quantity[type][size] === ''">
 						<h3>{{item.name}}</h3> 
-						<p><span class="tab">Item #: {{item.id}}</span></p>
-						<p> Quantity: <span class="tab">{{quantity[type][size]}}</span>Type: <span class="tab">{{type}}</span><span class="tab">Size: {{item.size[size]}}</span><span class="tab">Unit Price: ${{item.price[type][size]}}</span><span class="tab">Total: ${{item.price[type][size] * quantity[type][size]}}</span><img src="../../assets/brand-elements/delete_x.svg" class="delete"></p>
+						<p>Item #: {{item.id}}</p>
+						<p> 
+							Quantity: <input class="tab" [(ngModel)]="quantity[type][size]" /> 
+							Type: <span class="tab">{{type}}</span>
+							<span class="tab">Size: {{item.size[size]}}</span>
+							<span class="tab">Unit Price: ${{item.price[type][size]}}</span>
+							<span class="tab">Total: ${{item.price[type][size] * quantity[type][size]}}</span>
+							<a (click)="deleteItem(item)"><img src="../../assets/brand-elements/delete_x.svg" class="delete"></a>
+						</p>
 					</div>
 				</div>
 			</div>

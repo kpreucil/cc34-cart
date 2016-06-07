@@ -30,4 +30,7 @@ export class CartItemComponent {
 		console.log(sizes);
 		return sizes;
 	}
+	deleteItem(item) {
+		this.cartService.deleteFromCart(item);
+	}
 }
