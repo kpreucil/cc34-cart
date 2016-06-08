@@ -13,4 +13,18 @@ import { CartService } from '../../services/cart.service';
 export class CartRouteComponent {
 	constructor(private cartService: CartService) {
 	}
+
+	shouldShowItem(quantity) {
+		for (let i = 0; i < quantity.length; i++) {
+			if (quantity[i] = 0 && quantity[i] != "") {
+				return false;
+			}
+			return true;
+		}
+	 //    loop through each quantity
+		// if they all sum to 0
+		// and none of them is ""
+		// return false
+	 //    return true
+	}
 }

@@ -32,11 +32,15 @@ var ItemDescriptionComponent = (function () {
         this.router.navigate(["/cart"]);
     };
     ItemDescriptionComponent.prototype.addToCart = function () {
-        // this.cartService.inventory.push({item: this.currItem, quantity: this.itemQuantities})
         console.log('this is the currItem in addToCart', this.currItem);
         this.cartService.pushToCart(this.currItem, this.itemQuantities);
-        //redirect to cart page?
         this.openCart();
+    };
+    ItemDescriptionComponent.prototype.renderImage = function (currImage) {
+        this.largeImage = currImage.lg;
+    };
+    ItemDescriptionComponent.prototype.ngOnInit = function () {
+        this.largeImage = this.currItem.images[0].lg;
     };
     __decorate([
         core_1.Input(), 

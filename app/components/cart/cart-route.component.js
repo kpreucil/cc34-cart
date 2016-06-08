@@ -16,6 +16,19 @@ var CartRouteComponent = (function () {
     function CartRouteComponent(cartService) {
         this.cartService = cartService;
     }
+    CartRouteComponent.prototype.shouldShowItem = function (quantity) {
+        for (var i = 0; i < quantity.length; i++) {
+            if (quantity[i] = 0 && quantity[i] != "") {
+                return false;
+            }
+            return true;
+        }
+        //    loop through each quantity
+        // if they all sum to 0
+        // and none of them is ""
+        // return false
+        //    return true
+    };
     CartRouteComponent = __decorate([
         core_1.Component({
             directives: [cart_item_component_1.CartItemComponent, cart_total_component_1.CartTotalComponent],

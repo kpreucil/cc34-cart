@@ -10,6 +10,7 @@ import { CartService } from '../../services/cart.service';
 
 export class ItemDescriptionComponent { 
 	@Input() currItem;
+	largeImage: string;
 
 	private itemQuantities = {
 			paper: {
@@ -33,11 +34,16 @@ export class ItemDescriptionComponent {
 	}
 
 	addToCart () {
-		// this.cartService.inventory.push({item: this.currItem, quantity: this.itemQuantities})
 		console.log( 'this is the currItem in addToCart', this.currItem);
 		this.cartService.pushToCart(this.currItem, this.itemQuantities);
 
-		//redirect to cart page?
 		this.openCart();
+	}
+
+	renderImage(currImage: any) {
+		this.largeImage = currImage.lg
+	}
+	ngOnInit () {
+		this.largeImage = this.currItem.images[0].lg;
 	}
 }

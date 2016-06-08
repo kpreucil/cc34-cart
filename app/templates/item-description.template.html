@@ -1,66 +1,84 @@
 <div class="col-sm-1">
-	<div class="imgThumb" id="one">
-		<img src={{currItem.thumb1}} class="imgFit">
-	</div> 
-	<div class="imgThumb" id="two">
-		<img src="{{currItem.thumb2}}" class="imgFit">
-	</div> 
-	<div class="imgThumb" id="three">
-		<img src="{{currItem.thumb3}}" class="imgFit">
+	<div class="imgThumb" *ngFor="let image of currItem.images" (click)="renderImage(image)">
+		<img src={{image.thumb}} class="imgFit">
 	</div> 
 </div>
 <div class="col-sm-5 imgContainer">
-	<!-- Img -->
-	<img src="{{currItem.img1}}" class="imgFit">
+	<!-- Large Img -->
+	<img src="{{largeImage}}" class="imgFit">
 </div>
-<div class="col-sm-4">
+<div class="col-sm-6">
 	<h2>{{currItem.name}}</h2>
-	<p>id: {{currItem.id}}</p>
-	<p>Description: <br /> {{currItem.description}}
-	</p>
+  <div class="row">
+    <div class="col-sm-8">
+    	<p>id: {{currItem.id}}</p>
+      <p>Description: <br /> {{currItem.description}}</p>
+    </div>
+    <div class="col-sm-4">
+    <!-- START DropDowns -->
+      <div class="panel-group drkBrownText" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel">
+          <div class="itemAccordian" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <!-- <img src="../../assets/brand-elements/accArrows-18.svg" class="cartArrows"> -->
+                    <img src="../../assets/brand-elements/accArrowFillLeft-18.svg" class="itemArrows">
+                    Paper Prints
+                    <img src="../../assets/brand-elements/accArrowFillRight-16.svg" class="itemArrows">
+                </a>
+              </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="list-group centerText">
+                <br />
+                <input class="item" type="number" name="paper-print" value="8x10" [(ngModel)]="itemQuantities.paper.sm">&nbsp;<span class="tab">{{currItem.size.sm}}</span>${{currItem.price.paper.sm}}
+                <br /><br />
+                <input class="item" type="number" name="paper-print" value="11x14" [(ngModel)]="itemQuantities.paper.md">&nbsp;<span class="tab" >{{currItem.size.md}}</span>${{currItem.price.paper.md}}
+                <br /><br />
+                <input class="item" type="number" name="paper-print" value="16x20" [(ngModel)]="itemQuantities.paper.lg">&nbsp;<span class="tab">{{currItem.size.lg}}</span>${{currItem.price.paper.lg}}
+                <br />
+              </div>
+          </div>
+        </div>
+        <!-- END paper accordian -->
+
+      <!-- START canvas accordian -->
+        <div class="panel ">
+          <div class="itemAccordian" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <img src="../../assets/brand-elements/accArrowFillLeft-18.svg" class="itemArrows">
+                  Canvas Prints
+                  <img src="../../assets/brand-elements/accArrowFillRight-16.svg" class="itemArrows">
+                </a>
+              </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="list-group centerText">
+                <br />
+                <input class="item" type="number" name="canvas-print" value="8x10" [(ngModel)]="itemQuantities.canvas.sm">&nbsp;<span class="tab">{{currItem.size.sm}}</span>${{currItem.price.canvas.sm}}
+                <br /><br />
+                <input class="item" type="number" name="canvas-print" value="11x14" [(ngModel)]="itemQuantities.canvas.md">&nbsp;<span class="tab">{{currItem.size.md}}</span>${{currItem.price.canvas.md}}
+                <br /><br />
+                <input class="item" type="number" name="canvas-print" value="16x20" [(ngModel)]="itemQuantities.canvas.lg">&nbsp;<span class="tab">{{currItem.size.lg}}</span>${{currItem.price.canvas.lg}}
+                <br />
+              </div>
+          </div>
+        </div>
+        <!-- END canvas accordian -->
+    </div>
+    <!-- END DROPDOWNS -->
+
+    <!-- START ADD TO CART BUTTON -->
+    <button (click)="addToCart()">
+      <img src="../../assets/brand-elements/empty-button.svg" class="itemButton">
+      <p class="addItem">Add To Cart</p>
+    </button>
+    <!-- END ADD TO CART BUTTON -->
+
+    </div>
+  </div>
 </div>
-<div class="col-sm-2">
-	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  		<div class="panel panel-default">
-    		<div class="panel-heading" role="tab" id="headingOne">
-      			<h4 class="panel-title">
-        			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          				Paper Prints
-        			</a>
-      			</h4>
-    		</div>
-    		<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      			<div class="list-group centerText">
-      				<br />
-        			<input type="number" name="paper-print" value="8x10" [(ngModel)]="itemQuantities.paper.sm">&nbsp;<span class="tab">{{currItem.size.sm}}</span>${{currItem.price.paper.sm}}
-        			<br /><br />
-        			<input type="number" name="paper-print" value="11x14" [(ngModel)]="itemQuantities.paper.md">&nbsp;<span class="tab" >{{currItem.size.md}}</span>${{currItem.price.paper.md}}
-        			<br /><br />
-    					<input type="number" name="paper-print" value="16x20" [(ngModel)]="itemQuantities.paper.lg">&nbsp;<span class="tab">{{currItem.size.lg}}</span>${{currItem.price.paper.lg}}
-    					<br />
-      			</div>
-    		</div>
-  		</div>
-  		<div class="panel panel-default">
-    		<div class="panel-heading" role="tab" id="headingTwo">
-		      <h4 class="panel-title">
-			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-			        	Canvas Prints
-			        </a>
-      			</h4>
-    		</div>
-    		<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      			<div class="list-group centerText">
-      				<br />
-		        	<input type="number" name="canvas-print" value="8x10" [(ngModel)]="itemQuantities.canvas.sm">&nbsp;<span class="tab">{{currItem.size.sm}}</span>${{currItem.price.canvas.sm}}
-        			<br /><br />
-        			<input type="number" name="canvas-print" value="11x14" [(ngModel)]="itemQuantities.canvas.md">&nbsp;<span class="tab">{{currItem.size.md}}</span>${{currItem.price.canvas.md}}
-        			<br /><br />
-    					<input type="number" name="canvas-print" value="16x20" [(ngModel)]="itemQuantities.canvas.lg">&nbsp;<span class="tab">{{currItem.size.lg}}</span>${{currItem.price.canvas.lg}}
-    					<br />
-		      	</div>
-    		</div>
-  		</div>
-	</div>
-  <button (click)="addToCart()">Add To Cart</button>
-</div>
+<!-- <div class="col-sm-2">
+	
+</div> -->
