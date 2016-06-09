@@ -18,6 +18,7 @@ var cart_route_component_1 = require('./components/cart/cart-route.component');
 var home_route_component_1 = require('./components/home/home-route.component');
 var about_route_component_1 = require('./components/about/about-route.component');
 var info_route_component_1 = require('./components/info/info-route.component');
+var checkout_route_component_1 = require('./components/cart/checkout-route.component');
 // import { PortfolioRouteComponent } from './components/portfolio/portfolio-route.component';
 var AppComponent = (function () {
     function AppComponent() {
@@ -25,7 +26,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'angular-app',
-            directives: [router_1.ROUTER_DIRECTIVES, item_route_component_1.ItemRouteComponent, footer_component_1.FooterComponent, nav_component_1.NavComponent, shop_route_component_1.ShopRouteComponent, cart_route_component_1.CartRouteComponent, home_route_component_1.HomeRouteComponent, about_route_component_1.AboutRouteComponent],
+            directives: [router_1.ROUTER_DIRECTIVES, item_route_component_1.ItemRouteComponent, footer_component_1.FooterComponent, nav_component_1.NavComponent, shop_route_component_1.ShopRouteComponent, cart_route_component_1.CartRouteComponent, home_route_component_1.HomeRouteComponent, about_route_component_1.AboutRouteComponent, checkout_route_component_1.CheckoutRouteComponent],
             template: "\n  \t<navigation></navigation>\n  \t<div>\n  \t\t<router-outlet></router-outlet>\n  \t</div>\n  \t<footer></footer>\n  "
         }),
         router_1.Routes([
@@ -55,6 +56,10 @@ var AppComponent = (function () {
             },
             { path: '/cart',
                 component: cart_route_component_1.CartRouteComponent
+            },
+            {
+                path: '/checkout',
+                component: checkout_route_component_1.CheckoutRouteComponent
             }
         ]), 
         __metadata('design:paramtypes', [])

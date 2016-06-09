@@ -10,6 +10,9 @@ body {
 .yellow {
 	background-color: #FAF3A1;
 }
+.yellowText {
+	color: #FAF3A1;
+}
 
 .aqua {
 	background-color: #BAE0CE;
@@ -115,10 +118,10 @@ a:active {
 }
 
 /* HOME */
-.mainImg {
+/*.mainImg {
 	position: absolute;
 	max-width: 95%;
-}
+}*/
 
 /* ART SHOP */
 /* Pull Out */
@@ -160,11 +163,10 @@ a:active {
 .imgfit {
 	/*width: 100%;*/
 	height: 100%; 
-/*	margin-left: 7%;
-*/}
+}
 .imgThumb {
-	height: 75px;
-	width: 75px;
+	height: 65px;
+	width: 65px;
 	border: 1px solid #CFCABD;
 	margin-bottom: 3px;
 }
@@ -172,7 +174,9 @@ a:active {
 	height: 475px;
 	width: 475px;
 	border: 1px solid #CFCABD;
+	/*padding-left: -15px;*/
 }
+
 input.item {
 	width: 2.5em;
 	border: 1px solid #CFCABD;
@@ -259,6 +263,39 @@ input.item {
 .delete {
 	width: 3%;
 }
+input.cart {
+	width: 5em;
+	padding-left: 3px;
+	margin-right: 0px;
+}
+
+/*CHECKOUT*/
+
+.cartButton {
+	width: 30%;
+	position: absolute;
+	z-index: -1;
+	margin-top: 5%;
+	margin-left: 20%;
+}
+.submit {
+	margin-left: 28%;
+	position: absolute;
+	font-family: 'deriviaregular';
+	font-size: 16px;
+	margin-top: 7%;
+	color: #726969;
+	text-align: center;
+}
+
+.infoHead {
+	font-size: 20px;
+	margin-bottom: 10%;
+	font-family: 'deriviaregular';
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #CFCABD;
+}
 
 /* Home */
 .mainSlideContainer {
@@ -268,9 +305,8 @@ input.item {
 }
 
 .mainImg {
-	/*width: 100%;*/
-	height: 100%;
-	position: absolute;
+	width: 100%;
+	margin: 0 auto;
 }
 .splatter {
 	position: absolute;

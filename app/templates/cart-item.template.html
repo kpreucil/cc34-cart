@@ -15,7 +15,7 @@
 						<h3>{{item.name}}</h3> 
 						<p>Item #: {{item.id}}</p>
 						<p> 
-							Quantity: <input class="tab" [(ngModel)]="quantity[type][size]" /> 
+							Quantity: <input class="tab cart" [(ngModel)]="quantity[type][size]" /> 
 							Type: <span class="tab">{{type}}</span>
 							<span class="tab">Size: {{item.size[size]}}</span>
 							<span class="tab">Unit Price: ${{item.price[type][size]}}</span>

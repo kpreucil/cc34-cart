@@ -9,24 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var cart_service_1 = require('../../services/cart.service');
-var CartTotalComponent = (function () {
-    function CartTotalComponent(router, cartService) {
-        this.router = router;
-        this.cartService = cartService;
+var ThankYouComponent = (function () {
+    function ThankYouComponent() {
     }
-    CartTotalComponent.prototype.goToCheckout = function () {
-        this.router.navigate(["/checkout"]);
-    };
-    CartTotalComponent = __decorate([
+    ThankYouComponent = __decorate([
         core_1.Component({
-            selector: 'cart-total',
-            templateUrl: 'app/templates/cart-total.template.html'
+            selector: 'thank-you',
+            templateUrl: 'app/templates/thank-you.template.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router, cart_service_1.CartService])
-    ], CartTotalComponent);
-    return CartTotalComponent;
+        __metadata('design:paramtypes', [])
+    ], ThankYouComponent);
+    return ThankYouComponent;
 }());
-exports.CartTotalComponent = CartTotalComponent;
-//# sourceMappingURL=cart-total.component.js.map
+exports.ThankYouComponent = ThankYouComponent;
+//# sourceMappingURL=thank-you.component.js.map

@@ -10,12 +10,13 @@ import { CartRouteComponent } from './components/cart/cart-route.component';
 import { HomeRouteComponent } from './components/home/home-route.component';
 import { AboutRouteComponent } from './components/about/about-route.component';
 import { InfoRouteComponent } from './components/info/info-route.component';
+import { CheckoutRouteComponent } from './components/cart/checkout-route.component';
 // import { PortfolioRouteComponent } from './components/portfolio/portfolio-route.component';
 
 
 @Component({
   selector: 'angular-app',
-  directives: [ROUTER_DIRECTIVES, ItemRouteComponent, FooterComponent, NavComponent, ShopRouteComponent, CartRouteComponent, HomeRouteComponent, AboutRouteComponent],
+  directives: [ROUTER_DIRECTIVES, ItemRouteComponent, FooterComponent, NavComponent, ShopRouteComponent, CartRouteComponent, HomeRouteComponent, AboutRouteComponent, CheckoutRouteComponent],
   template: `
   	<navigation></navigation>
   	<div>
@@ -51,7 +52,11 @@ import { InfoRouteComponent } from './components/info/info-route.component';
 	},
 	{	path: '/cart',
 		component: CartRouteComponent
-	}
+	},
+  {
+    path: '/checkout',
+    component: CheckoutRouteComponent
+  }
 ])
 export class AppComponent {
 	constructor() {}

@@ -10,7 +10,14 @@ import { CartService } from '../../services/cart.service';
 
 export class CartTotalComponent {
 
-	constructor(private cartService: CartService) { }
+	constructor(
+		private router: Router,
+		private cartService: CartService
+		) { }
+
+	goToCheckout() {
+		this.router.navigate(["/checkout"]);
+	}
 	// @Input() item;
 	// @Input() quantity;
 	// constructor(
