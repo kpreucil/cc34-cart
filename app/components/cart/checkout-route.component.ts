@@ -13,15 +13,10 @@ import { ThankYouComponent } from '../cart/thank-you.component';
 })
 
 export class CheckoutRouteComponent {
+	private billingSame: boolean = false;
+
 	constructor(
 		private cartService: CartService,
 		private router: Router
 		){}
-
-	submit(){
-		// this.router.navigate[(ThankYouComponent)];
-		$('#myModal').modal(options);
-	}
-
-
 }

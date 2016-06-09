@@ -18,11 +18,8 @@ var CheckoutRouteComponent = (function () {
     function CheckoutRouteComponent(cartService, router) {
         this.cartService = cartService;
         this.router = router;
+        this.billingSame = false;
     }
-    CheckoutRouteComponent.prototype.submit = function () {
-        // this.router.navigate[(ThankYouComponent)];
-        $('#myModal').modal(options);
-    };
     CheckoutRouteComponent = __decorate([
         core_1.Component({
             directives: [cart_item_component_1.CartItemComponent, cart_total_component_1.CartTotalComponent, thank_you_component_1.ThankYouComponent],

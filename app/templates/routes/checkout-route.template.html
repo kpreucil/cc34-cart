@@ -38,82 +38,84 @@
 			<div class="drkBrownText">
 				<div>
 					<label>Same as Shipping</label>
-					<input type="checkbox" name="same">
+					<input type="checkbox" name="same" [(ngModel)]="billingSame">
 				</div>
-				<br />
-				<label>First Name: </label>
-				<input type="string" name="firstNameBilling" placeholder="Bob" />
-				<br />
-				<label>Last Name: </label>
-				<input type="string" name="lastNameBilling" placeholder="Saget" />
-				<br />
-				<label>Address Line 1: </label>
-				<input type="string" name="address1Billing" placeholder="Street" />
-				<br />
-				<label>Address Line 2: </label>
-				<input type="string" name="address2Billing" placeholder="Unit #">
-				<br />
-				<label>City: </label>
-				<input type="string" name="cityBilling" placeholder="Boulder">
-				<br />
-				<label>State: </label>
-				<input type="string" name="stateBilling" placeholder="CO">
-				<!-- <select name="state">
-				  <option value="alBilling">AL</option>
-				  <option value="akBilling">AK</option>
-				  <option value="azBilling">AZ</option>
-				  <option value="arBilling">AR</option>
-				  <option value="caBilling">CA</option>
-				  <option value="coBilling">CO</option>
-				  <option value="ctBilling">CT</option>
-				  <option value="deBilling">DE</option>
-				  <option value="flBilling">FL</option>
-				  <option value="gaBilling">GA</option>
-				  <option value="hiBilling">HI</option>
-				  <option value="idBilling">ID</option>
-				  <option value="ilBilling">IL</option>
-				  <option value="inBilling">IN</option>
-				  <option value="iaBilling">IA</option>
-				  <option value="ksBilling">KS</option>
-				  <option value="kyBilling">KY</option>
-				  <option value="laBilling">LA</option>
-				  <option value="meBilling">ME</option>
-				  <option value="mdBilling">MD</option>
-				  <option value="maBilling">MA</option>
-				  <option value="miBilling">MI</option>
-				  <option value="mnBilling">MN</option>
-				  <option value="msBilling">MS</option>
-				  <option value="moBilling">MO</option>
-				  <option value="mtBilling">MT</option>
-				  <option value="neBilling">NE</option>
-				  <option value="nvBilling">NV</option>
-				  <option value="nhBilling">NH</option>
-				  <option value="njBilling">NJ</option>
-				  <option value="nmBilling">NM</option>
-				  <option value="nyBilling">NY</option>
-				  <option value="ncBilling">NC</option>
-				  <option value="ndBilling">ND</option>
-				  <option value="ohBilling">OH</option>
-				  <option value="okBilling">OK</option>
-				  <option value="orBilling">OR</option>
-				  <option value="paBilling">PA</option>
-				  <option value="hiBilling">HI</option>
-				  <option value="riBilling">RI</option>
-				  <option value="scBilling">SC</option>
-				  <option value="sdBilling">SD</option>
-				  <option value="tnBilling">TN</option>
-				  <option value="txBilling">TX</option>
-				  <option value="utBilling">UT</option>
-				  <option value="vtBilling">VT</option>
-				  <option value="vaBilling">VA</option>
-				  <option value="waBilling">WA</option>
-				  <option value="wvBilling">WV</option>
-				  <option value="wiBilling">WI</option>
-				  <option value="wyBilling">WY</option>
-				</select> -->
-				<br />
-				<label>Zip: </label>
-				<input type="number" name="zipBilling">
+				<div [hidden]="billingSame">
+					<br />
+					<label>First Name: </label>
+					<input type="string" name="firstNameBilling" placeholder="Bob" />
+					<br />
+					<label>Last Name: </label>
+					<input type="string" name="lastNameBilling" placeholder="Saget" />
+					<br />
+					<label>Address Line 1: </label>
+					<input type="string" name="address1Billing" placeholder="Street" />
+					<br />
+					<label>Address Line 2: </label>
+					<input type="string" name="address2Billing" placeholder="Unit #">
+					<br />
+					<label>City: </label>
+					<input type="string" name="cityBilling" placeholder="Boulder">
+					<br />
+					<label>State: </label>
+					<input type="string" name="stateBilling" placeholder="CO">
+					<!-- <select name="state">
+					  <option value="alBilling">AL</option>
+					  <option value="akBilling">AK</option>
+					  <option value="azBilling">AZ</option>
+					  <option value="arBilling">AR</option>
+					  <option value="caBilling">CA</option>
+					  <option value="coBilling">CO</option>
+					  <option value="ctBilling">CT</option>
+					  <option value="deBilling">DE</option>
+					  <option value="flBilling">FL</option>
+					  <option value="gaBilling">GA</option>
+					  <option value="hiBilling">HI</option>
+					  <option value="idBilling">ID</option>
+					  <option value="ilBilling">IL</option>
+					  <option value="inBilling">IN</option>
+					  <option value="iaBilling">IA</option>
+					  <option value="ksBilling">KS</option>
+					  <option value="kyBilling">KY</option>
+					  <option value="laBilling">LA</option>
+					  <option value="meBilling">ME</option>
+					  <option value="mdBilling">MD</option>
+					  <option value="maBilling">MA</option>
+					  <option value="miBilling">MI</option>
+					  <option value="mnBilling">MN</option>
+					  <option value="msBilling">MS</option>
+					  <option value="moBilling">MO</option>
+					  <option value="mtBilling">MT</option>
+					  <option value="neBilling">NE</option>
+					  <option value="nvBilling">NV</option>
+					  <option value="nhBilling">NH</option>
+					  <option value="njBilling">NJ</option>
+					  <option value="nmBilling">NM</option>
+					  <option value="nyBilling">NY</option>
+					  <option value="ncBilling">NC</option>
+					  <option value="ndBilling">ND</option>
+					  <option value="ohBilling">OH</option>
+					  <option value="okBilling">OK</option>
+					  <option value="orBilling">OR</option>
+					  <option value="paBilling">PA</option>
+					  <option value="hiBilling">HI</option>
+					  <option value="riBilling">RI</option>
+					  <option value="scBilling">SC</option>
+					  <option value="sdBilling">SD</option>
+					  <option value="tnBilling">TN</option>
+					  <option value="txBilling">TX</option>
+					  <option value="utBilling">UT</option>
+					  <option value="vtBilling">VT</option>
+					  <option value="vaBilling">VA</option>
+					  <option value="waBilling">WA</option>
+					  <option value="wvBilling">WV</option>
+					  <option value="wiBilling">WI</option>
+					  <option value="wyBilling">WY</option>
+					</select> -->
+					<br />
+					<label>Zip: </label>
+					<input type="number" name="zipBilling">
+				</div>
 			</div>
 		</div>
 
@@ -182,17 +184,15 @@
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    <div class="modal-content centerText drkBrown">
+      <div class="modal-header derivia">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        	<h1 class="yellowText" id="myModalLabel">Success!</h1>
       </div>
-      <div class="modal-body">
-        ...
+       <div class="modal-body beigeText">
+        	Your order is being processed.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
