@@ -72,7 +72,7 @@
     <!-- END DROPDOWNS -->
 
     <!-- START ADD TO CART BUTTON -->
-    <button (click)="addToCart()">
+    <button (click)="addToCart()" [hidden]="!checkQuantities()">
       <img src="../../assets/brand-elements/empty-button.svg" class="itemButton">
       <p class="addItem">Add To Cart</p>
     </button>

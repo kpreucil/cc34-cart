@@ -33,11 +33,22 @@ export class ItemDescriptionComponent {
 		this.router.navigate(["/cart"]);
 	}
 
-	addToCart () {
-		console.log( 'this is the currItem in addToCart', this.currItem);
-		this.cartService.pushToCart(this.currItem, this.itemQuantities);
+	checkQuantities () {
+		for (let type in this.itemQuantities) {
+			for (let size in this.itemQuantities[type]) {
+				if (this.itemQuantities[type][size] > 0) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 
-		this.openCart();
+	addToCart () {
+		if (this.checkQuantities()){
+			this.cartService.pushToCart(this.currItem, this.itemQuantities);
+			this.openCart();
+		}
 	}
 
 	renderImage(currImage: any) {

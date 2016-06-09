@@ -1,5 +1,5 @@
 <nav>
-	<img src="../assets/brand-elements/websiteLogo.png" class="logo">
+	<a (click)="goToRoute('/')"><img src="../assets/brand-elements/websiteLogo.png" class="logo"></a>
 	<div class="container-fluid">
 		&nbsp;
 		<div class="row margin-top-nav">
@@ -26,15 +26,12 @@
 					</div>
 					<div class="col-md-4 navSolid centerText margin-top-nav">
 						<div class="row">
-							<div class="col-md-1">
+							<div class="col-md-2">
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 							<p><a (click)="goToRoute('/shop')">Art Shop</a></p>
 							</div>
-							<div class="col-md-3">
-					  	 		<p>Contact</p>
-							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<p><a (click)="goToRoute('/cart')"><img src="../../assets/brand-elements/cart.svg" class="cartNav"> Cart {{cartService.getCartItemCount()}}</a></p>
 							</div>
 							<div class="col-md-1">

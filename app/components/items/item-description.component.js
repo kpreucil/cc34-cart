@@ -31,10 +31,21 @@ var ItemDescriptionComponent = (function () {
     ItemDescriptionComponent.prototype.openCart = function () {
         this.router.navigate(["/cart"]);
     };
+    ItemDescriptionComponent.prototype.checkQuantities = function () {
+        for (var type in this.itemQuantities) {
+            for (var size in this.itemQuantities[type]) {
+                if (this.itemQuantities[type][size] > 0) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
     ItemDescriptionComponent.prototype.addToCart = function () {
-        console.log('this is the currItem in addToCart', this.currItem);
-        this.cartService.pushToCart(this.currItem, this.itemQuantities);
-        this.openCart();
+        if (this.checkQuantities()) {
+            this.cartService.pushToCart(this.currItem, this.itemQuantities);
+            this.openCart();
+        }
     };
     ItemDescriptionComponent.prototype.renderImage = function (currImage) {
         this.largeImage = currImage.lg;

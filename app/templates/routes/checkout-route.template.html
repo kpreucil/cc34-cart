@@ -40,6 +40,10 @@
 					<label>Same as Shipping</label>
 					<input type="checkbox" name="same" [(ngModel)]="billingSame">
 				</div>
+				<div [hidden]="!billingSame">
+					<img src="../../../assets/brand-elements/checkmark-05.svg" class="checkmarkFit">
+					<p class="derivia drkBrownText">Your information has been saved</p>
+				</div>
 				<div [hidden]="billingSame">
 					<br />
 					<label>First Name: </label>
